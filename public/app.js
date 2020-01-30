@@ -1,22 +1,6 @@
 
-// // Initialize Express
-// const app = express();
-
-// // Configure middleware
-
-// // Use morgan logger for logging requests
-// app.use(logger('dev'));
-// // Parse request body as JSON
-// app.use(express.urlencoded({extended: true}));
-// app.use(express.json());
-// // Make public a static folder
-// app.use(express.static('public'));
-
-// // Connect to the Mongo DB
-// mongoose.connect('mongodb://localhost/wtnh', {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true});
-
 // Grab the articles as a json
-$.getJSON('/api/articles', function(data) {
+$.getJSON('/api/scrape', function(data) {
   // For each one
   for (let i = 0; i < data.length; i++) {
     // Display the apropos information on the page
@@ -27,6 +11,7 @@ $.getJSON('/api/articles', function(data) {
     `);
   }
 });
+
 
 
 // Whenever someone clicks a p tag
